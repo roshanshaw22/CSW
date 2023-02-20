@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
+
+
+/********** Template CSS **********/
+:root {
+    --primary: #0d6efd !important;
+    --secondary: #0B2154;
+    --light: #F2F2F2;
+    --dark: #111111;
+}
+
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+h1, .h1, h2, .h2, h3,  h4, .h4, h5, .h5, h6, .h6 {
+    font-family: "Barlow",sans-serif;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #0B2154;
+    font-size: 1.75rem;
+}
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: .5s;
+    border-radius: 0;
+}
+
+.btn{
+box-shadow: 0 10px 30px 0 rgb(0 0 0 / 15%);
+border-radius: none;
+text-transform: none;
+font-size: 40px;
+font-family: "Barlow",sans-serif;
+margin-left: 20px;
+
+}
+
+
+.btn-square {
+    width: 38px;
+    height: 38px;;
+    border-radius: 0;
+
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+    border-radius: 0;
+
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+    border-radius: 0;
+
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 0;
+}
+
+
+/*** Navbar ***/
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.carServ{
+    color:#0d6efd !important;;
+    font-family: "Barlow",sans-serif;
+    font-weight: 800;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color:rgb(0, 0, 0);
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+    font-weight: 700;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+    height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.navbar-light.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+/* 
+body{
+    margin: 0;
+    font-family: "Ubuntu",sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #596277;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+} */
+/*** Header ***/
+.carousel-caption.d-flex.align-items-center{
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+}
+
+.carousel-caption {
+    top: 0;
+    right: 15%;
+    left: 0rem;
+    bottom: 0;
+    max-width: 100%;
+    width:100%;
+    height: 100%;
+    background: rgba(14, 11, 11, 0.7);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+    
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.page-header {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-header-inner {
+    background: rgba(0, 0, 0, .7);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--light);
+}
+
+
+/*** Facts ***/
+.fact {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/carousel-bg-1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*** Service ***/
+.service .nav .nav-link {
+    background: var(--light);
+    transition: .5s;
+}
+
+.service .nav .nav-link.active {
+    background: var(--primary);
+}
+
+.service .nav .nav-link.active h4 {
+    color: #FFFFFF !important;
+}
+
+
+.services-name, h5{
+    cursor: pointer;
+    color:black;
+}
+.services-name, h5:hover{
+    color: #0d6efd !important;
+}
+
+/*** Booking ***/
+.booking {
+    
+    background: rgb(0,16,36);
+    background: linear-gradient(90deg, rgba(0,16,36,1) 0%, rgba(9,68,121,0.9136029411764706) 35%, rgba(0,212,255,1) 100%),url(../components/images/img.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.bootstrap-datetimepicker-widget.bottom {
+    top: auto !important;
+}
+
+.bootstrap-datetimepicker-widget .table * {
+    border-bottom-width: 0px;
+}
+
+.bootstrap-datetimepicker-widget .table th {
+    font-weight: 500;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+    background: var(--primary);
+}
+
+.bootstrap-datetimepicker-widget table td.today::before {
+    border-bottom-color: var(--primary);
+}
+
+/*** Footer ***/
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url(../img/carousel-bg-1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+/* <!---------------------------CUSTOM CSS ---------------------------> */
+
+.card{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border:none;
+    height: 110%;
+    width: 150%;
+    border-radius: 10px;
+}
+
+.price{
+    font-size: 25px;
+    color:#0B2154;
+    font-weight: 700;
+}
+
+.old-price{
+    text-decoration: line-through;
+    margin-left: 5px;
+    font-size: 17px;
+}
+.ratings{
+    font-size: 12px;
+}
+.checked{
+    color:orange;
+}
+.unchecked{
+    color: rgb(161, 161, 161);
+    /* border: 1px solid orange; */
+}
+.rating-number{
+    color:#1390d8;
+    font-size: 14px;
+}
+
+.badge{
+    background-color: #1390d8;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.display-3 {
+    color:#ffffff;
+    font-family: "Barlow",sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/* CUSTOM CSS */
+
+/* <!---------------------------CUSTOM CSS ---------------------------> */
+
+/* <!---------------------------CUSTOM CSS ---------------------------> */
+
+.card{
+    border:none;
+    height: 110%;
+    width: 150%;
+    border-radius: 10px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    cursor: pointer;
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.price{
+    font-size: 25px;
+    color:#0B2154;
+    font-weight: 700;
+}
+
+.old-price{
+    margin-left: 8px;
+    text-decoration: line-through;
+    font-size: 17px;
+}
+.ratings{
+    font-size: 12px;
+}
+.checked{
+    color:orange;
+}
+.unchecked{
+    color: rgb(161, 161, 161);
+    /* border: 1px solid orange; */
+}
+.rating-number{
+    color:#1390d8;
+    font-size: 14px;
+}
+
+.badge{
+    background-color: #1390d8;
+    font-size: 14px;
+    font-weight: 400;
+}
+.fa-cart-shopping{
+    margin-right: 5px;
+
+}
+.book-now{
+    margin-left: 15px;
+    font-weight: 600;
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+# Clients
+--------------------------------------------------------------*/
+.clients {
+    padding: 12px 0;
+    text-align: center;
+    background-color: #ebe6e6;
+  }
+  
+  .clients img {
+    max-width: 45%;
+    transition: all 0.4s ease-in-out;
+    display: inline-block;
+    padding: 15px 0;
+    filter: grayscale(100);
+  }
+  
+  .clients img:hover {
+    filter: none;
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .clients img {
+      max-width: 40%;
+    }
+  }
