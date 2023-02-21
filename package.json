@@ -19,6 +19,7 @@
     "counterup2": "^2.0.2",
     "jquery": "^3.6.3",
     "json-server": "^0.17.1",
+    "pinia": "^2.0.32",
     "popper.js": "^1.16.1",
     "vue-router": "^4.1.6"
   }

@@ -1,6 +1,6 @@
 
 <template>
-
+<div>
     <Header/>
   
 
@@ -220,8 +220,6 @@
                             </div>
                         </div>
                     </div>
-                    <router-link to="/about" class="btn btn-primary py-3 px-5">Read More<i
-                            class="fa fa-arrow-right ms-3"></i></router-link>
                 </div>
             </div>
         </div>
@@ -387,6 +385,7 @@
 
 
 <Footer/>
+</div>
 </template>
 
 <script>

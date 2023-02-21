@@ -1,11 +1,12 @@
 <template>
+<div>
     <Header></Header>
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-8">
 
             </div>
-            <table id="cart" class="table table-hover table-condensed">
+            <table class="table table-hover table-condensed">
                 <thead>
                     <tr>
                         <th style="width:50%">Product</th>
@@ -83,7 +84,7 @@
             </table>
         </div>
     </div>
-
+</div>
 </template>
 <script>
 import Header from "./Header.vue"
